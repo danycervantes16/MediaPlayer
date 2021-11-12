@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Hi, this document is for testing</h4>
+    <script>
+        //IIFE inmediately invoque function
+        (function() {
+            let color = 'green';
+            function printColor() {
+                console.log(color)
+            }
+        })()
+
+        //funciones que regresan funciones
+        function makeColorPrinter(color) {
+            let colorMessage =  `The color is ${color}`;
+            return function () {
+                console.log(colorMessage)
+            }
+        }
+
+        let greenColorPrinter = makeColorPrinter('green');
+        console.log(greenColorPrinter())
+        
+        //Variables privadas
+
+        const counter = {
+            count: 3,
+        }
+        console.log(counter.count);
+        counter.count = 99; //it reassigned for a new value
+        console.log(counter.count)
+
+        function makecounter (n) {
+            let count = n;
+            return {
+                increase: function () { count +=1 },
+                decrease: function () { count -=1},
+                getCount: function () { return count},
+            }
+        }
+        let counter = makecounter(7)
+        console.log('the count is: ', counter.getCount()); //7
+        counter.increase(); //8
+        console.log('the count is: ', counter.getCount()); //8
+        counter.decrease(); //7
+        counter.decrease(); //6
+        counter.decrease(); //5
+        console.log('the count is: ', counter.getCount()); //5
+        counter.count = 0; //its imposible reassign a new value
+        console.log('the count is: ', counter.getCount()); //5
+    </script>
+</body>
+</html>

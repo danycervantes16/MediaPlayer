@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Source+Sans+Pro:wght@300;600&display=swap');
+/* 
+font-family: 'Otomanopee One', sans-serif; 
+font-family: 'Source Sans Pro', sans-serif;
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #ebebeb;
+}
+header {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr;
+    margin: 2% 5%;
+}
+.nameTitle{
+    display: flex;
+    grid-column-start: 1;
+    justify-content: flex-start;
+    align-items: center;
+}
+.circule {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background-color: #5cb85c;
+    margin-right: 2%;
+}
+.nameTitle p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.07rem;
+}
+.nameTitle .name {
+    font-size: 1.4rem;
+    font-family: 'Otomanopee One', sans-serif;
+    letter-spacing: normal;
+    margin-right: 0.5rem;
+}
+.navegation {
+    display: flex;
+    justify-content: flex-end;
+}
+.navegation a {
+    text-decoration: none;
+    margin-left: 0.8rem;
+    font-size: 1.1rem;
+    color: black;
+    padding-right: 1rem;
+    border-right: 1px solid black;
+}
+.navegation .contact {
+    padding-right: 0rem;
+    border-right: none;
+}
+main {
+    width: 100%;
+    height: auto;
+}
+video {
+    display: flex;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    border-radius: 2%;
+}
+.bottons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 2rem;
+    border-radius: 20% 10%;
+    background-color: #5cb85c;
+    color: black;
+    border: 1px solid black;
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #5cb85c;
+    transform: scale(1.05);
+}
+.sound {
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d; /* con este gita en Y */
+    position: relative;
+    margin: 2rem 2rem;
+}
+.sound:hover {
+    cursor: pointer;
+}
+.sound .face {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.face.unmuted {
+    transform: rotateY(180deg);
+}
+/* it's necesary more code */
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 20%;
+    border-top: 2px solid #00000041;
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+footer a {
+    text-decoration: none;
+}
+footer .phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 1;
+}
+.phone img {
+    margin-right: 0.5rem;
+    width: 2rem;
+}
+footer .email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 2;
+}
+.email img {
+    margin-right: 0.5rem;
+    width: 2rem;
+}
+footer .socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 3;
+}
+.socialMedia p {
+    margin-right: 0.5rem;
+}
+.socialMedia img {
+    margin-right: 0.5rem;
+    width: 2rem;
+}
+footer .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column-start: 4;
+}
+.location img {
+    margin-right: 0.5rem;
+    width: 2rem;
+}
