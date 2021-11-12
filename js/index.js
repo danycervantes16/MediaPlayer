@@ -14,4 +14,3 @@ const player = new MediaPlayer(
 
 button.onclick = () => player.togglePlay()
 sound.onclick =() => player.toggleSound(sound)
-
